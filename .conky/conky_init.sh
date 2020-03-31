@@ -1,0 +1,1 @@
+command conky -c "$HOME/.conky/info.conkyrc" && command conky -c "$HOME/.conky/clock.conkyrc"  &
