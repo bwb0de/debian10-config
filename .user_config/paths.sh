@@ -1,1 +1,2 @@
-PATH="$(echo $PATH):/home/danielc/.local/bin"
+PATH="$(echo $PATH):~/.local/bin"
+PATH="$(echo $PATH):~/.scripts/mkbk"
