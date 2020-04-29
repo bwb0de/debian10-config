@@ -5,5 +5,13 @@
     <property name="navigationbar" type="empty">
       <property name="position" type="string" value="left"/>
     </property>
+    <property name="height" type="uint" value="378"/>
+    <property name="width" type="uint" value="939"/>
+  </property>
+  <property name="file" type="empty">
+    <property name="current-uri" type="string" value="file:///home/danielc/Documentos/Alice/InuYasha/DONE"/>
+  </property>
+  <property name="desktop" type="empty">
+    <property name="type" type="string" value="xfce"/>
   </property>
 </channel>

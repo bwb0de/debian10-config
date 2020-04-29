@@ -1,13 +1,84 @@
 #!/bin/sh
 
-alias wf='cd "$HOME"/Documentos/Devel/GitHub/; clear; ls -l'
+alias pje="/usr/share/pje-office/pjeOffice.sh"
+alias wf='cd "$HOME"/Documentos/Devel/GitHub/; clear; ls -l | cut -d ":" -f 2 | cut -d " " -f 2'
 alias conky='command conky -c "$HOME/.conky/info.conkyrc" && command conky -c "$HOME/.conky/clock.conkyrc"  &'
 alias git='git_patch'
 alias apt='apt_patch'
-alias starcraft="wine ~/.wine/drive_c/Program\ Files/Starcraft\ No\ Install/StarCraft.exe"
-alias gmk="wine '/home/danielc/.wine/drive_c/Program Files (x86)/Game_Maker8/Game_Maker.exe'"
+alias youtube-dl="youtube_download"
+alias webm-extract="extract_audio_from_webm"
+alias mp4-extract="extract_audio_from_mp4"
+alias edit-alias="nano ~/.user_config/aliases.sh"
+alias edit-paths="nano ~/.user_config/paths.sh"
+alias mkgit="create_git_prj"
+alias bkconf='INIT_PWD=$(pwd); mkbk first-bk debian10; cd /home/danielc/Documentos/Devel/GitHub/debian10-config/; mkdir .config; cp -fr terminator .config/; cp -fr xfce4 .config/; rm -fR terminator xfce4; cd "$INIT_PWD"'
 
 INFO="\033[01;34mbwb0de patch 0.1\033[00m"
+
+toggle_xfce-panel_autohide () {
+	AUTO_HIDE_OP=$(xfconf-query -c xfce4-panel -p /panels/panel-1/autohide-behavior)
+	if [ $AUTO_HIDE_OP -eq 0 ];
+	then
+		xfconf-query -c xfce4-panel -p /panels/panel-1/autohide-behavior -s 2
+	else
+		xfconf-query -c xfce4-panel -p /panels/panel-1/autohide-behavior -s 0
+	fi
+}
+
+
+create_git_prj () {
+	if [ $# -eq 0 ];
+	then
+	    printf "É necessário o nome da pasta a ser criada.\n";
+	fi
+	mkdir "$1"
+	cd "$1"
+	touch README.md
+	touch .gitignore
+	cp ~/.user_config/licences/LICENSE ./
+	git init
+	nano README.md
+	nano .gitignore
+	git add -A
+	git commit -m "Registro inicial"
+	printf "Estabelecer vínculo do projeto com o github? (s/n): "
+	read -r OP
+	if [ "$OP" == "s" ]
+	then 
+		git remote add origin "git@github.com:bwb0de/$1.git"
+		git push -u origin master
+	fi
+}
+
+
+extract_audio_from_mp4 () {
+    #Needs ffmpeg...
+    if [ "$1" == "ogg" ];
+    then
+        for FILE in *.mp4;
+        do
+            echo -e "Processing video '\e[32m$FILE\e[0m'";
+            ffmpeg -i "${FILE}" -vn -y "${FILE%.mp4}.ogg"
+        done
+    fi
+}
+
+extract_audio_from_webm () {
+    #Needs ffmpeg...
+    if [ "$1" == "ogg" ];
+    then
+        for FILE in *.webm;
+        do
+            echo -e "Processing video '\e[32m$FILE\e[0m'";
+            ffmpeg -i "${FILE}" -vn -y "${FILE%.webm}.ogg"
+        done
+    fi
+}
+
+youtube_download () {
+    /usr/local/bin/youtube-dl "$1"
+}
+
 
 git_patch() {
     if [ "$1" == "help" ];
@@ -57,10 +128,10 @@ apt_patch() {
         cat /tmp/apt_help_end
     elif [ "$1" == 'installed' ];
     then
-        command apt list | grep "\[installed" | cut -d"/" -f1
+        command apt list 2> /dev/null | grep "\[installed" | cut -d"/" -f1
     elif [ "$1" == 'download-installed' ];
     then
-        command apt-get download $(apt installed)
+        command apt-get download $(apt installed 2> /dev/null)
     else
         command apt "$@"
     fi

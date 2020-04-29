@@ -8,7 +8,7 @@
       <property name="position" type="string" value="p=2;x=1904;y=540"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="70"/>
+      <property name="size" type="uint" value="76"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="2"/>
         <value type="int" value="3"/>
@@ -16,15 +16,19 @@
         <value type="int" value="1"/>
         <value type="int" value="6"/>
         <value type="int" value="5"/>
+        <value type="int" value="4"/>
       </property>
       <property name="mode" type="uint" value="1"/>
       <property name="background-style" type="uint" value="1"/>
       <property name="background-color" type="array">
-        <value type="uint" value="13621"/>
-        <value type="uint" value="14649"/>
-        <value type="uint" value="17733"/>
+        <value type="uint" value="57568"/>
+        <value type="uint" value="57568"/>
+        <value type="uint" value="57568"/>
         <value type="uint" value="65535"/>
       </property>
+      <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="leave-opacity" type="uint" value="100"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -32,7 +36,7 @@
       <property name="show-labels" type="bool" value="false"/>
       <property name="flat-buttons" type="bool" value="true"/>
       <property name="show-only-minimized" type="bool" value="false"/>
-      <property name="include-all-workspaces" type="bool" value="true"/>
+      <property name="include-all-workspaces" type="bool" value="false"/>
     </property>
     <property name="plugin-15" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
@@ -40,18 +44,31 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
-        <value type="string" value="vlc"/>
-        <value type="string" value="ktorrent"/>
-        <value type="string" value="system-config-printer"/>
-        <value type="string" value="notas"/>
-        <value type="string" value="miniaplicativo gerenciador de redes"/>
-        <value type="string" value="clipman"/>
         <value type="string" value="thunar"/>
+        <value type="string" value="vlc"/>
+        <value type="string" value="system-config-printer"/>
+        <value type="string" value="gerenciador de tarefas"/>
+        <value type="string" value="discord"/>
+        <value type="string" value="miniaplicativo gerenciador de redes"/>
+        <value type="string" value="ktorrent"/>
+        <value type="string" value="notas"/>
+        <value type="string" value="clipman"/>
+        <value type="string" value="gpick"/>
+        <value type="string" value="javaembeddedframe"/>
       </property>
     </property>
     <property name="notes" type="empty">
       <property name="new-window" type="empty">
         <property name="always-on-top" type="bool" value="true"/>
+        <property name="width" type="int" value="270"/>
+        <property name="height" type="int" value="337"/>
+        <property name="sticky" type="bool" value="false"/>
+      </property>
+      <property name="global" type="empty">
+        <property name="font-description" type="string" value="Sans 11"/>
+        <property name="tabs-position" type="int" value="0"/>
+        <property name="background-color" type="string" value="GTK+"/>
+        <property name="skip-taskbar-hint" type="bool" value="true"/>
       </property>
     </property>
     <property name="plugin-2" type="string" value="whiskermenu"/>
@@ -75,6 +92,17 @@
       </property>
       <property name="appearance" type="uint" value="0"/>
       <property name="invert-orientation" type="bool" value="true"/>
+    </property>
+    <property name="clipman" type="empty">
+      <property name="tweaks" type="empty">
+        <property name="never-confirm-history-clear" type="bool" value="true"/>
+      </property>
+    </property>
+    <property name="plugin-4" type="string" value="clock">
+      <property name="mode" type="uint" value="4"/>
+      <property name="flash-separators" type="bool" value="true"/>
+      <property name="show-meridiem" type="bool" value="false"/>
+      <property name="tooltip-format" type="string" value=""/>
     </property>
   </property>
 </channel>

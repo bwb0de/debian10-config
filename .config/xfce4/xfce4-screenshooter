@@ -1,8 +1,8 @@
 delay=0
 region=1
-show_mouse=1
-screenshot_dir=file:///home/danielc/Imagens
-app=none
+show_mouse=0
+screenshot_dir=file:/home/danielc/Documentos/Alice/Inuiasha
+app=gimp-2.10
 last_user=
 action=1
 

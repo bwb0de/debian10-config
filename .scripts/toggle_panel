@@ -1,0 +1,13 @@
+#!/bin/bash
+
+toggle_xfce-panel_autohide () {
+        AUTO_HIDE_OP=$(xfconf-query -c xfce4-panel -p /panels/panel-1/autohide-behavior)
+        if [ $AUTO_HIDE_OP -eq 0 ];
+        then
+                xfconf-query -c xfce4-panel -p /panels/panel-1/autohide-behavior -s 2
+        else
+                xfconf-query -c xfce4-panel -p /panels/panel-1/autohide-behavior -s 0
+        fi
+}
+
+toggle_xfce-panel_autohide

@@ -2,8 +2,8 @@
 
 <channel name="xsettings" version="1.0">
   <property name="Net" type="empty">
-    <property name="ThemeName" type="string" value="Xfce-basic"/>
-    <property name="IconThemeName" type="string" value="Tango"/>
+    <property name="ThemeName" type="string" value="Materia-compact"/>
+    <property name="IconThemeName" type="string" value="Adwaita"/>
     <property name="DoubleClickTime" type="empty"/>
     <property name="DoubleClickDistance" type="empty"/>
     <property name="DndDragThreshold" type="empty"/>
@@ -34,6 +34,6 @@
     <property name="MenuBarAccel" type="empty"/>
     <property name="CursorThemeName" type="empty"/>
     <property name="CursorThemeSize" type="empty"/>
-    <property name="DecorationLayout" type="empty"/>
+    <property name="DecorationLayout" type="string" value="menu:close,maximize,minimize"/>
   </property>
 </channel>
