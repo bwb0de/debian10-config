@@ -27,7 +27,7 @@
             <value type="uint" value="65535"/>
           </property>
           <property name="image-style" type="int" value="3"/>
-          <property name="last-image" type="string" value="/home/danielc/Recursos/Wallpapers/Wallpapers_RubySunset.jpeg"/>
+          <property name="last-image" type="string" value="/home/danielc/.user_config/wallpapers/Wallpapers_BienenfresserRobinie.jpeg"/>
           <property name="brightness" type="int" value="0"/>
           <property name="saturation" type="double" value="1.000000"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>

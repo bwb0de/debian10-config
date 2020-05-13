@@ -1,5 +1,5 @@
 favorites=firefox-esr.desktop,org.xfce.Catfish.desktop,lyx.desktop,code.desktop,org.gnome.meld.desktop,terminator.desktop,org.gnome.Calculator.desktop,xfce4-screenshooter.desktop,pavucontrol.desktop,org.gnome.clocks.desktop,gtimer.desktop,net.lutris.Lutris.desktop,openMSX-Catapult.desktop,net.lutris.emu-19.desktop
-recent=terminator.desktop,firefox-esr.desktop,net.lutris.emu-19.desktop,pavucontrol.desktop,net.lutris.Lutris.desktop,xfce-session-settings.desktop,xfce-wm-settings.desktop,xfce4-settings-editor.desktop,org.kde.ktorrent.desktop,com.blackmagicdesign.resolve.desktop
+recent=terminator.desktop,xfce-keyboard-settings.desktop,pavucontrol.desktop,firefox-esr.desktop,code.desktop,net.lutris.emu-19.desktop,net.lutris.Lutris.desktop,xfce-session-settings.desktop,xfce-wm-settings.desktop,xfce4-settings-editor.desktop
 button-title=Aplicações
 button-icon=/home/danielc/.debian_ico.png
 button-single-row=false

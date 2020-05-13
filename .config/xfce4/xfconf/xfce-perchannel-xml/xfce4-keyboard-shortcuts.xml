@@ -38,6 +38,7 @@
       <property name="&lt;Super&gt;p" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Super&gt;Insert" type="string" value="ristretto /home/danielc/dvorak_layout.png"/>
       <property name="&lt;Super&gt;h" type="string" value="/home/danielc/.scripts/toggle_panel"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;p" type="string" value="/home/danielc/.scripts/pomodoro-cli/pomodoro classic"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

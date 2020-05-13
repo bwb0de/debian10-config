@@ -13,7 +13,6 @@ from modules.cli_tools import write_to_file, read_from_file, pick_options
 target_bg_snd = '.target_pomodoro_snd'
 app_folder = getoutput("echo $HOME") + os.sep + '.scripts/pomodoro-cli' + os.sep
 pasta_sons_de_fundo = app_folder + 'snd/'
-input(pasta_sons_de_fundo)
 
 def stop_bgsnd():
     try:
